@@ -108,6 +108,11 @@ public class UserProfile extends AppCompatActivity {
 
                         if (TextUtils.isEmpty(namee)) {
                             Toast.makeText(getApplicationContext(), "Please add some data.", Toast.LENGTH_SHORT).show();
+                              num = user.phone;
+                reg = user.regNo;
+                perName.setText(name);
+                phone.setText(num);
+                mail.setText(reg);
                         } else {
                             addDatatoFirebase(namee,num,reg);
                         }
