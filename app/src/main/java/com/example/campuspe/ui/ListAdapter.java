@@ -73,6 +73,16 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
         RatingBar ratingBar;
         TextView canteen_name;
         ImageView card_pic;
+        user.uri!=null){
+//            Picasso.get().load(user.getUri()).into(holder.card_pic);
+//        }
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(contextHere,CanteenActivity.class);
+                intent.putExtra("cName",data.getName());
+//                intent.putExtra("uid",user.getUid());
+                intent.setFlags(Intent.FLAG_ACTIVITY
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             canteen_name = itemView.findViewById(R.id.canteenName);
